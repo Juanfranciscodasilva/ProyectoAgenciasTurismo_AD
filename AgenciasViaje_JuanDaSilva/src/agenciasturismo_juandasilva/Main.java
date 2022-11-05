@@ -1,8 +1,10 @@
 package agenciasturismo_juandasilva;
 
+import BBDD.DB4O_AgenciaBD;
 import Enum.EnumAgencias;
 import Ventanas.VPrincipal;
 import Ventanas.VSeleccionAgencia;
+import BBDD.MYSQL_AgenciaBD;
 
 public class Main {
     
@@ -11,10 +13,12 @@ public class Main {
     
     public static EnumAgencias agenciaSeleccionada;
 
-    public static void main(String[] args) {
-        System.out.println("test");
-        vSeleccionAgencia = new VSeleccionAgencia();
-        vSeleccionAgencia.setVisible(true);
+    public static void main(String[] args) throws Exception  {
+        
+//        MYSQL_AgenciaBD bdMysql = new MYSQL_AgenciaBD();
+          DB4O_AgenciaBD bdDB4O = new DB4O_AgenciaBD();
+//        vSeleccionAgencia = new VSeleccionAgencia();
+//        vSeleccionAgencia.setVisible(true);
     }
     
     public static void SeleccionarAgencia(EnumAgencias agencia){

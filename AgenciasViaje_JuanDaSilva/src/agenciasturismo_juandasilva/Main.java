@@ -5,6 +5,7 @@ import Enum.EnumAgencias;
 import Ventanas.VPrincipal;
 import Ventanas.VSeleccionAgencia;
 import BBDD.MYSQL_AgenciaBD;
+import BBDD.SQLITE_AgenciaBD;
 
 public class Main {
     
@@ -16,7 +17,8 @@ public class Main {
     public static void main(String[] args) throws Exception  {
         
 //        MYSQL_AgenciaBD bdMysql = new MYSQL_AgenciaBD();
-          DB4O_AgenciaBD bdDB4O = new DB4O_AgenciaBD();
+//          DB4O_AgenciaBD bdDB4O = new DB4O_AgenciaBD();
+          SQLITE_AgenciaBD sqlite = new SQLITE_AgenciaBD();
 //        vSeleccionAgencia = new VSeleccionAgencia();
 //        vSeleccionAgencia.setVisible(true);
     }

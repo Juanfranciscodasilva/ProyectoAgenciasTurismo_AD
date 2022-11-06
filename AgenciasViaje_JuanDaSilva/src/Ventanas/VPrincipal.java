@@ -129,6 +129,11 @@ public class VPrincipal extends javax.swing.JFrame {
         jMenu5.setText("Empleados");
 
         AltaEmpleado.setText("Alta de empleado");
+        AltaEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaEmpleadoActionPerformed(evt);
+            }
+        });
         jMenu5.add(AltaEmpleado);
 
         ModificarEmpleado.setText("Modificar empleado");
@@ -181,6 +186,11 @@ public class VPrincipal extends javax.swing.JFrame {
         DatosAgencia.setText("Agencia");
 
         jMenuItem3.setText("Datos");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         DatosAgencia.add(jMenuItem3);
 
         jMenuBar1.add(DatosAgencia);
@@ -284,8 +294,16 @@ public class VPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_VerVisitasGuiadasDelClienteActionPerformed
 
     private void AltaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaClienteActionPerformed
-
+        Main.abrirCrearCliente();
     }//GEN-LAST:event_AltaClienteActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        Main.abrirVentanaDatosAgencia();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void AltaEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaEmpleadoActionPerformed
+        Main.abrirCrearEmpleado();
+    }//GEN-LAST:event_AltaEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments

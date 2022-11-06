@@ -1,4 +1,4 @@
-package BBDD;
+package BBDD.db4o;
 
 import Clases.Agencia;
 import com.db4o.Db4oEmbedded;
@@ -27,4 +27,28 @@ public class DB4O_AgenciaBD {
         }
         db.close();
     }
+    
+    public static ObjectContainer openConnection(){
+        try{
+            return Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),BDPer);
+        }catch(Exception ex){
+            return null;
+        }
+    }
+    
+    public static Agencia getAgencia(){
+        try{
+            ObjectContainer db = openConnection();
+            ObjectSet<Agencia> result = db.queryByExample(new Agencia());
+            while (result.hasNext()) {
+                Agencia age = result.next();
+                return age;
+            }
+            return null;
+        }catch(Exception ex){
+            return null;
+        }
+    }
+    
+    
 }
